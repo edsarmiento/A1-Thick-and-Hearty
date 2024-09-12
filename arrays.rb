@@ -29,10 +29,10 @@ class Arrays
     aux = []
     repeated_numbers.each do |number|
       repeated_numbers.each do |sub_number|
-        aux << number if (number + sub_number) == a1.length
-        aux << number if (number + sub_number) == a2.length
-        aux << number if (number - sub_number) == a1.length
-        aux << number if (number - sub_number) == a2.length
+        aux << number if (number + sub_number).abs == a1.length
+        aux << number if (number + sub_number).abs == a2.length
+        aux << number if (number - sub_number).abs == a1.length
+        aux << number if (number - sub_number).abs == a2.length
       end
     end
     aux.uniq
